@@ -8,12 +8,13 @@ function App() {
 
 
   return (
+    // <img src={CoinLogo} alt="" />
     <div className='w-full flex justify-center'>
       <div className='w-full 2xl:container text-amber-50 '>
        <Header/>
        <Main/>
       </div>
-      {/* <img src={CoinLogo} alt="" /> */}
+      
     </div>
   )
 }
