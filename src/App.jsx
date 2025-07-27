@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-   useEffect(() => {
+  useEffect(() => {
     fetch(
       'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=50&page=1&sparkline=true'
     )
@@ -22,23 +22,26 @@ function App() {
         setCoin(data);
         setLoading(false);
       })
-      .catch((err) => {
+      .catch(() => {
         setError(err.message);
         setLoading(false);
       });
   }, []);
 
   console.log(coin);
-  
-  
+
   return (
-    
     <div className='w-full flex justify-center'>
       <div className='w-full 2xl:container text-amber-50 p-4'>
-       <Header/>
-       <Main coin={coin}/>
+        <Header />
+        <div>{loading ? <div className="bouncing-loader">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div> : error ? <span>error!</span> : <Main coin={coin} />}</div>
+
       </div>
-      
+
     </div>
   )
 }
