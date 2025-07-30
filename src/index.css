@@ -1,11 +1,16 @@
 @import "tailwindcss";
 
 @theme {
+  --color-primary: #0D1421;
   --color-coolblue: #323546;
   --color-lightblue: #486DFB;
   --color-darktext: #646B80;
   --color-hoverblue: #535564;
   --color-line: #323546;
+  --color-modal-color: #222531;
+  --color-text-input: #A1A7BB;
+
+
 }
 
 body {

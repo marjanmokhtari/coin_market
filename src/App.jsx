@@ -33,7 +33,7 @@ function App() {
   return (
     <div className='w-full flex justify-center'>
       <div className='w-full 2xl:container text-amber-50 p-4'>
-        <Header />
+        <Header coin={coin} />
         <div>{loading ? <div className="bouncing-loader">
           <div></div>
           <div></div>

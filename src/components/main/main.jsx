@@ -12,8 +12,8 @@ export default function main({ coin }) {
             <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
             <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
             <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">24h %</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden xl:block">Market Cap</th>
-            <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider ">Last 7 Days</th>
+            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden xl:table-cell">Market Cap</th>
+            <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider hidden xl:table-cell">Last 7 Days</th>
           </tr>
         </thead>
         <tbody className=" divide-y divide-line">
@@ -41,10 +41,10 @@ export default function main({ coin }) {
               >
                 {coin.price_change_percentage_24h?.toFixed(2)}%
               </td>
-              <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-500 hidden xl:flex">
+              <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-500 hidden xl:table-cell">
                 ${coin.market_cap.toLocaleString('en-US')}
               </td>
-              <td className="px-3 py-4 whitespace-nowrap   ">
+              <td className="px-3 py-4 whitespace-nowrap  hidden xl:table-cell ">
                 {coin.sparkline_in_7d?.price ? (
                   <Sparklines data={coin.sparkline_in_7d.price} width={200} height={20}>
                     <SparklinesLine color={coin.price_change_percentage_24h < 0 ? "red" : "green"} />
