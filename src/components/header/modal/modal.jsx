@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { IoSearchSharp } from "react-icons/io5";
 import { IoMdClose } from "react-icons/io";
 
@@ -8,6 +8,13 @@ export default function Modal({ closeModal, coin }) {
     const searchcoin = coin.filter(item =>
         item.name.toLowerCase().includes(search.toLowerCase())
     );
+
+    useEffect(() => {
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.body.style.overflow = "auto";
+        }
+    }, []);
 
     return (
         <div className='fixed backdrop-blur-lg bg-primary/5 w-full h-full top-0 left-0'>
@@ -49,17 +56,6 @@ export default function Modal({ closeModal, coin }) {
                                             <span className='pl-0.5 hidden xl:inline'>{item.price_change_percentage_24h?.toFixed(2)}%</span>
                                         </div>
                                     </div>
-
-                                    {/* <div className='flex flex-col **:text-xs **:font-medium'>
-                                        <div>
-                                            <span className='text-text-input' >MCap:</span>
-                                            <span className='pl-0.5'>${item.market_cap.toLocaleString('en-US')}</span>
-                                        </div>
-                                       <div>
-                                            <span className='text-text-input'>Vol(24):</span>
-                                            <span className='pl-0.5'>{item.price_change_percentage_24h?.toFixed(2)}%</span>
-                                        </div>
-                                    </div> */}
                                 </div>
                             </li>
                         ))}
