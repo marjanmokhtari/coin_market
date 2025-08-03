@@ -46,7 +46,7 @@ export default function Modal({ closeModal, coin }) {
                                         </div>
                                     </div>
 
-                                    <div className='flex flex-col **:text-xs **:font-medium items-center'>
+                                    <div className='flex flex-col **:text-xs **:font-medium '>
                                         <div>
                                             <span className='text-text-input' >MCap:</span>
                                             <span className='pl-0.5'>${item.market_cap.toLocaleString('en-US')}</span>
