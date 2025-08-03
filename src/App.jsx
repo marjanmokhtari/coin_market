@@ -27,9 +27,7 @@ function App() {
         setLoading(false);
       });
   }, []);
-
-  console.log(coin);
-
+  
   return (
     <div className='w-full flex justify-center'>
       <div className='w-full 2xl:container text-amber-50 p-4'>

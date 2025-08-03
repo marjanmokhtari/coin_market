@@ -7,13 +7,13 @@ export default function main({ coin }) {
     <>
       <table className="min-w-full divide-y divide-line cursor-pointer">
         <thead>
-          <tr>
-            <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">#</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Price</th>
-            <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">24h %</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider hidden xl:table-cell">Market Cap</th>
-            <th className="px-3 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider hidden xl:table-cell">Last 7 Days</th>
+          <tr className='*:px-3 *:py-4 *:uppercase *:tracking-wider *:text-xs *:font-medium *:text-gray-500'>
+            <th className="text-center text-">#</th>
+            <th className="text-left">Name</th>
+            <th className="text-left">Price</th>
+            <th className="text-center">24h %</th>
+            <th className="text-left hidden xl:table-cell">Market Cap</th>
+            <th className="text-center hidden xl:table-cell">Last 7 Days</th>
           </tr>
         </thead>
         <tbody className=" divide-y divide-line">

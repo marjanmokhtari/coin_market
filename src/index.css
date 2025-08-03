@@ -9,8 +9,10 @@
   --color-line: #323546;
   --color-modal-color: #222531;
   --color-text-input: #A1A7BB;
-
-
+  --color-box: #2b2e3d;
+  --color-bHover: #1e274f;
+  --color-outline-hover: #3861FB;
+  
 }
 
 body {
@@ -49,4 +51,17 @@ body {
 
 .bouncing-loader>div:nth-child(3) {
   animation-delay: 0.4s;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
 }
