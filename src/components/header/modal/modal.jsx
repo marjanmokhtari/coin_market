@@ -30,23 +30,23 @@ export default function Modal({ closeModal, coin }) {
                         {search && searchcoin.map(item => (
                             <li key={item.id} className="mb-2 text-white mx-3 cursor-pointer *:hover:bg-bHover *:hover:outline *:hover:outline-outline-hover">
 
-                                <div className='bg-box py-3 px-3 rounded-md grid grid-cols-2 grid-rows-1 gap-1'>
+                                <div className='bg-box py-3 px-3 rounded-md grid grid-cols-2 grid-rows-1 gap-1 items-center'>
                                     <div className='flex gap-3 items-center'>
                                         <img src={item.image} alt="" className='w-6 h-6' />
                                         <div className='flex flex-col  *:font-medium'>
-                                            <span className='text-sm'>{item.name}</span>
+                                            <span className='text-sm hidden xl:inline'>{item.name}</span>
                                             <span className='text-text-input text-xs'>{item.symbol.toUpperCase()}</span>
                                         </div>
                                     </div>
 
-                                    <div className='flex flex-col **:text-xs **:font-medium'>
+                                    <div className='flex flex-col **:text-xs **:font-medium items-center'>
                                         <div>
                                             <span className='text-text-input' >MCap:</span>
                                             <span className='pl-0.5'>${item.market_cap.toLocaleString('en-US')}</span>
                                         </div>
                                         <div>
-                                            <span className='text-text-input'>Vol(24):</span>
-                                            <span className='pl-0.5'>{item.price_change_percentage_24h?.toFixed(2)}%</span>
+                                            <span className='text-text-input hidden xl:inline'>Vol(24):</span>
+                                            <span className='pl-0.5 hidden xl:inline'>{item.price_change_percentage_24h?.toFixed(2)}%</span>
                                         </div>
                                     </div>
 
